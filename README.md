@@ -1,4 +1,5 @@
 # DebG-Det2
+detectron2をインストールする必要あり
 
 # Windows10環境でのDetectron2のインストール方法
 ## Detectron2とは
