@@ -9,32 +9,46 @@ Faster R-CNN や Mask R-CNN といったような高精度なモデルを簡単�
 ## Windows10でのインストール方法
 以下の順にコマンドプロンプトに打ち込んでいく．
 
+アナコンダ上に仮想環境を作成（今回は仮想環境名を detectron_py36 に指定）
 ```
 $ conda create -n detectron_py36
 ```
-アナコンダ上に仮想環境を作成（今回は仮想環境名を detectron_py36 に指定）
 
+pytorchとtorchvisionのインストール．今回はアナコンダのバージョンが10.1
 ```
 conda install pytorch=1.3.0 torchvision=0.4.1 cudatoolkit=10.1 -c pytorch
 ```
-pytorchとtorchvisionのインストール．今回はアナコンダのバージョンが10.1
 
+OpenCVのインストール
 ```
 pip install opencv-contrib-python
 ```
-OpenCVのインストール
 
+fvcoreをインストール
 ```
 pip install git+https://github.com/facebookresearch/fvcore
 ```
 
+cythonのインストール
 ```
 pip install cython
 ```
-cythonのインストール
+
+cocoAPIをインストール
 
 ```
 pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+```
+
+以下３行を，windowsにインストールするために打つ
+```
+git clone https://github.com/conansherry/detectron2
+```
+```
+cd detectron2
+```
+```
+python setup.py build develop
 ```
 
 ファイルの編集，以下は最後でもよい
