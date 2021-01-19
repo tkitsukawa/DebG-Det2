@@ -8,11 +8,14 @@ Faster R-CNN や Mask R-CNN といったような高精度なモデルを簡単�
 基本的にはLinux環境がインストールの対象となっている．
 
 ## Windows10でのインストール方法
+githubにwindows環境でのインストールをしている人がいるのでそれを参考に行う
+urlは，https://github.com/conansherry/detectron2
+
 以下の順にコマンドプロンプトに打ち込んでいく．
 
 アナコンダ上に仮想環境を作成（今回は仮想環境名を detectron_py36 に指定）
 ```
-$ conda create -n detectron_py36
+$ conda create -n detectron_py36　python=3.6
 ```
 
 pytorchとtorchvisionのインストール．今回はアナコンダのバージョンが10.1
