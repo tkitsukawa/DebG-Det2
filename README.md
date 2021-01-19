@@ -41,21 +41,42 @@ cocoAPIをインストール
 pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
 ```
 
-以下３行を，windowsにインストールするために打つ
+以下を，windowsにインストールするために打つ
 ```
 git clone https://github.com/conansherry/detectron2
 ```
+
+最後にビルドするために以下を打つ
 ```
 cd detectron2
 ```
+
 ```
 python setup.py build develop
 ```
 
-ファイルの編集，以下は最後でもよい
+
+
+ーーエラーが出たらーー
+
+model_zoo関係のエラーが出たらmodel.zooライブラリを新しくする必要あり．
+
+公式のDetectron2
+https://github.com/facebookresearch/detectron2
+をダウンロードしてそこのmodel.zooをコピーしてwindows用detectron2のmodel_zooライブラリを置き換える．
+
+その後もう一度ビルドをしたら完了．
+
+
+
+
+ーーおまけーー
+
+jupyter notebook を使えるようにする．（必要なら）
 ```
 conda install -c anaconda jupyter
 ```
-jupyter notebook を使えるようにする．（必要なら）
+
+
 
 この仮想環境にほかのものもインストールすると，Detectron2などインストールしたものが壊れる可能性があるので，この仮想環境はDetectron2用としたほうがいい．
